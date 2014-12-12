@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<default>
+  <HarmonyPath path="../../../../../../../../microchip/harmony/v1_01"/>
+  <ForceOptimization flag="true"/>
+  <Files>
+    <Entry>
+      <Name>sys_clk_static.h</Name>
+      <Checksum>5136E2C3EE2A15E666B1927251CBCEAA</Checksum>
+    </Entry>
+    <Entry>
+      <Name>system_definitions.h</Name>
+      <Checksum>29C9263FE300E92063C953486E8F7320</Checksum>
+    </Entry>
+    <Entry>
+      <Name>drv_usart_static.h</Name>
+      <Checksum>4313AF27C141D2702BBA3F49D100802B</Checksum>
+    </Entry>
+    <Entry>
+      <Name>system_init.c</Name>
+      <Checksum>81DC54A30A0F49E8EAE3803D9802912B</Checksum>
+    </Entry>
+    <Entry>
+      <Name>drv_pmp_static.h</Name>
+      <Checksum>B29B3CD45DE98EDEB92651BA02211D4E</Checksum>
+    </Entry>
+    <Entry>
+      <Name>sys_clk_static.c</Name>
+      <Checksum>C285A50FEE451E19318A0B7A7FE5B07A</Checksum>
+    </Entry>
+    <Entry>
+      <Name>drv_pmp_static.c</Name>
+      <Checksum>08047AFA6BEEFF303BBE638D8E9713B9</Checksum>
+    </Entry>
+    <Entry>
+      <Name>system_config.h</Name>
+      <Checksum>1D650E77E54946641A8BA8250DFDA5F3</Checksum>
+    </Entry>
+    <Entry>
+      <Name>drv_usart_static.c</Name>
+      <Checksum>4ABB34F28AAAB95FB6D599AC79858BC1</Checksum>
+    </Entry>
+    <Entry>
+      <Name>system_tasks.c</Name>
+      <Checksum>0C62A913EBB64D666AB02448F36AC9D1</Checksum>
+    </Entry>
+    <Entry>
+      <Name>drv_tmr_static.h</Name>
+      <Checksum>F4E58F3C0B57C67883E654216ED7ECAC</Checksum>
+    </Entry>
+    <Entry>
+      <Name>sys_ports_static.c</Name>
+      <Checksum>21A485F9D430A6F6188FF61B85D429FA</Checksum>
+    </Entry>
+    <Entry>
+      <Name>system_interrupt.c</Name>
+      <Checksum>62012AA436D5C7F1F3F69C67113C99F0</Checksum>
+    </Entry>
+    <Entry>
+      <Name>drv_tmr_static.c</Name>
+      <Checksum>2B01FDF8D67394943FBE15063B6A831B</Checksum>
+    </Entry>
+  </Files>
+</default>
