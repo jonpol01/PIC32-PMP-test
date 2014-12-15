@@ -96,14 +96,14 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 /*** Ports System Service Configuration ***/
 
 
-#define SYS_PORT_B_ANSEL        0x88
+#define SYS_PORT_B_ANSEL        0x8a
 #define SYS_PORT_B_TRIS         0xc187
 #define SYS_PORT_B_ODC          0x4
 #define SYS_PORT_B_CNPU         0x0
 #define SYS_PORT_B_CNPD         0x0
 #define SYS_PORT_B_CNEN         0x0
 
-#define SYS_PORT_C_ANSEL        0xf000
+#define SYS_PORT_C_ANSEL        0x9000
 #define SYS_PORT_C_TRIS         0xf000
 #define SYS_PORT_C_ODC          0x2000
 #define SYS_PORT_C_CNPU         0x0
@@ -168,6 +168,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
  
  
+
 #define USE_8BIT_PMP
 
 // *****************************************************************************

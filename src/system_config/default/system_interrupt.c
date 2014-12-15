@@ -75,6 +75,41 @@ void __ISR(_TIMER_1_VECTOR, ipl1) _IntHandlerDrvTmrInstance0(void)
     DRV_TMR_Tasks_ISR(sysObj.drvTmr0);
 }
   
+void __ISR(_UART1_TX_VECTOR, ipl1) _IntHandlerDrvUsartTransmitInstance0(void)
+{
+
+    /* TODO: Add code to process interrupt here */
+
+    /* Clear pending interrupt */
+    PLIB_INT_SourceFlagClear(INT_ID_0, INT_SOURCE_USART_1_TRANSMIT);
+}
+void __ISR(_UART1_RX_VECTOR, ipl1) _IntHandlerDrvUsartReceiveInstance0(void)
+{
+
+    /* TODO: Add code to process interrupt here */
+
+    /* Clear pending interrupt */
+    PLIB_INT_SourceFlagClear(INT_ID_0, INT_SOURCE_USART_1_RECEIVE);
+}
+void __ISR(_UART1_FAULT_VECTOR, ipl1) _IntHandlerDrvUsartErrorInstance0(void)
+{
+
+    /* TODO: Add code to process interrupt here */
+
+    /* Clear pending interrupt */
+    PLIB_INT_SourceFlagClear(INT_ID_0, INT_SOURCE_USART_1_ERROR);
+}
+ 
+ 
+
+ 
+ 
+
+ 
+
+ 
+ 
+  
 /*******************************************************************************
  End of File
 */

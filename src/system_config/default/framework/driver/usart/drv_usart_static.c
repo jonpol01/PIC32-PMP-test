@@ -71,6 +71,21 @@ void DRV_USART0_Initialize(void)
     PLIB_USART_ReceiverEnable(USART_ID_1);
     PLIB_USART_ReceiverInterruptModeSelect(USART_ID_1, USART_RECEIVE_FIFO_ONE_CHAR);
 
+    /* Initialize TX interrupt */
+    PLIB_INT_SourceEnable(INT_ID_0, INT_SOURCE_USART_1_TRANSMIT);
+    PLIB_INT_VectorPrioritySet(INT_ID_0, INT_VECTOR_UART1_TX, INT_PRIORITY_LEVEL1);
+    PLIB_INT_VectorSubPrioritySet(INT_ID_0, INT_VECTOR_UART1_TX, INT_SUBPRIORITY_LEVEL0);
+
+    /* Initialize RX interrupt */
+    PLIB_INT_SourceEnable(INT_ID_0, INT_SOURCE_USART_1_RECEIVE);
+    PLIB_INT_VectorPrioritySet(INT_ID_0, INT_VECTOR_UART1_RX, INT_PRIORITY_LEVEL1);
+    PLIB_INT_VectorSubPrioritySet(INT_ID_0, INT_VECTOR_UART1_RX, INT_SUBPRIORITY_LEVEL0);
+
+    /* Initialize Fault interrupt */
+    PLIB_INT_SourceEnable(INT_ID_0, INT_SOURCE_USART_1_ERROR);
+    PLIB_INT_VectorPrioritySet(INT_ID_0, INT_VECTOR_UART1_FAULT, INT_PRIORITY_LEVEL1);
+    PLIB_INT_VectorSubPrioritySet(INT_ID_0, INT_VECTOR_UART1_FAULT, INT_SUBPRIORITY_LEVEL0);
+
     PLIB_USART_Enable(USART_ID_1);
 }
 

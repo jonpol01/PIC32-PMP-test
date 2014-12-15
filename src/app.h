@@ -106,13 +106,13 @@ typedef enum
 
 typedef struct
 {
-    /* The application's current state */
-    APP_STATES state;
-/* Timer callback handle */
-SYS_TMR_HANDLE timer;
-/* Timer callback flag */
-bool timerExpired;
-    /* TODO: Define any additional data used by the application. */
+	/* The application's current state */
+	APP_STATES state;
+	/* Timer callback handle */
+	SYS_TMR_HANDLE timer;
+	/* Timer callback flag */
+	bool timerExpired;
+	/* TODO: Define any additional data used by the application. */
 
 
 } APP_DATA;

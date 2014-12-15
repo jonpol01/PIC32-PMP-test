@@ -143,6 +143,9 @@ const DRV_TMR_INIT drvTmr0InitData =
     .asyncWriteEnable = false,
 };
 // </editor-fold>
+//<editor-fold defaultstate="collapsed" desc="DRV_USART Configuration">
+
+// </editor-fold>
 //<editor-fold defaultstate="collapsed" desc="SYS_TMR Configuration">
 /*** TMR Service Initialization Data ***/
 const SYS_TMR_INIT sysTmrInitData =
@@ -227,7 +230,8 @@ void SYS_Initialize ( void* data )
     SYS_INT_VectorSubprioritySet(INT_VECTOR_T1, INT_SUBPRIORITY_LEVEL0);
  
  
- 
+     DRV_USART0_Initialize();
+
 
     /*Initialize PMP0 */
     DRV_PMP0_Initialize();

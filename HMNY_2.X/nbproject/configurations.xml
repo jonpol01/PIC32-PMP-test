@@ -14,6 +14,9 @@
                 <logicalFolder name="pmp" displayName="pmp" projectFiles="true">
                   <itemPath>../src/system_config/default/framework/driver/pmp/drv_pmp_static.h</itemPath>
                 </logicalFolder>
+                <logicalFolder name="usart" displayName="usart" projectFiles="true">
+                  <itemPath>../src/system_config/default/framework/driver/usart/drv_usart_static.h</itemPath>
+                </logicalFolder>
               </logicalFolder>
               <logicalFolder name="system" displayName="system" projectFiles="true">
                 <logicalFolder name="clk" displayName="clk" projectFiles="true">
@@ -74,6 +77,9 @@
                   <logicalFolder name="src" displayName="src" projectFiles="true">
                     <itemPath>../src/system_config/default/framework/driver/pmp/src/drv_pmp_static.c</itemPath>
                   </logicalFolder>
+                </logicalFolder>
+                <logicalFolder name="usart" displayName="usart" projectFiles="true">
+                  <itemPath>../src/system_config/default/framework/driver/usart/drv_usart_static.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
               <logicalFolder name="system" displayName="system" projectFiles="true">
@@ -305,7 +311,7 @@
         <property key="oscillator.auxfrequencyunit" value="Mega"/>
         <property key="oscillator.frequency" value="198"/>
         <property key="oscillator.frequencyunit" value="Mega"/>
-        <property key="oscillator.rcfrequency" value="12"/>
+        <property key="oscillator.rcfrequency" value="80"/>
         <property key="oscillator.rcfrequencyunit" value="Mega"/>
         <property key="performancedata.show" value="false"/>
         <property key="periphADC1.altscl" value="false"/>

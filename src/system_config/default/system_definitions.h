@@ -57,6 +57,9 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "system/tmr/sys_tmr.h"
 #include "driver/tmr/drv_tmr.h"
 #include "driver/pmp/drv_pmp.h"
+#include "framework/driver/usart/drv_usart_static.h"
+#include "peripheral/usart/plib_usart.h"
+#include "peripheral/int/plib_int.h"
 #include "system/ports/sys_ports.h"
 
 

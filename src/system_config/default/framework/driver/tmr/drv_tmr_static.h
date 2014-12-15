@@ -56,7 +56,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVOCES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 #include <stdint.h>
 #include "peripheral/tmr/plib_tmr.h"
-#include "peripheral/int/plib_int.h"
 
 
 // *****************************************************************************

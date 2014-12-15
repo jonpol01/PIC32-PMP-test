@@ -53,6 +53,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 // *****************************************************************************
 
+//#include "app.h"
 #include "app.h"
 static int count;
 // *****************************************************************************
@@ -97,8 +98,23 @@ APP_DATA appData;
 
 /* TODO:  Add any necessary local functions.
 */
+void HD_Wr(uint8_t addr, uint8_t data){
+	/***/
+	//uint8_t data = 0x0F;
+	// Set the source address
+	PLIB_PMP_AddressSet(PMP_ID_0, addr);
+	// Check to see the PMP is not busy, and then read the data
+	if(!PLIB_PMP_PortIsBusy(PMP_ID_0)){
+		PLIB_PMP_MasterSend(PMP_ID_0, data);
+		PMDOUT = 0x4C;
+		SYS_PORTS_PinToggle(PORTS_ID_0, PORT_CHANNEL_D,PORTS_BIT_POS_11);
+	}
+}
 
-
+void HD_Rd(uint8_t addr, uint8_t data){
+	if(!PLIB_PMP_PortIsBusy(PMP_ID_0)){
+	}
+}
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Initialization and State Machine Functions
@@ -137,7 +153,7 @@ void APP_TimerCallback ( void )
 
 void APP_Tasks ( void )
 {
-    PMCONbits.CSF1 = 1;
+    //PMCONbits.CSF1 = 1;
     //PMCONbits.CS1P = 1;
 
 
@@ -164,20 +180,10 @@ void APP_Tasks ( void )
 			count++;
 			if(count == 10){
 				count = 0;
+				HD_Wr(0x02, 0x0C);
 			}
 			// receive the data
 
-		}
-		/***/
-		uint8_t data = 0x0F;
-		// Set the source address
-		PLIB_PMP_AddressSet(PMP_ID_0, 0x02);
-		// Check to see the PMP is not busy, and then read the data
-		if(!PLIB_PMP_PortIsBusy(PMP_ID_0))
-		{
-			PLIB_PMP_MasterSend(PMP_ID_0, data);
-			PMDOUT = 0x4C;
-			SYS_PORTS_PinToggle(PORTS_ID_0, PORT_CHANNEL_D,PORTS_BIT_POS_11);
 		}
 
 		//DRV_PMP_Write(&pmphandle, 0x0000, &myWriteBuffer, 2, 0);
@@ -193,9 +199,7 @@ void APP_Tasks ( void )
         }
 
     }
-
 }
-
 /*******************************************************************************
  End of File
  */
