@@ -66,6 +66,12 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define	HEX_02		0x02
 #define	HEX_03		0x03
 
+
+void Byte1ToByte2(unsigned char[], unsigned char[]);
+unsigned char HexData[16] ={0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37,
+							0x38, 0x39, 0x61, 0x62, 0x63, 0x64, 0x65, 0x66};
+#define MAX_LEN 3
+
 int		Byte2ToByte1(BYTE*, BYTE*);	/* 2Byte To 1Byte */
 // *****************************************************************************
 // *****************************************************************************
@@ -172,4 +178,26 @@ LOOP_END:
 	
 	/* END */
 	return(0);
+}
+
+/*******************************************************************************
+*  1BYTE TO 2BYTE
+*******************************************************************************/
+void Byte1ToByte2(unsigned char in_char[], unsigned char out_char[])
+{
+	int i, j;
+	unsigned char uc_Wrk[5];
+
+	j = 0;
+	for(i=0; i<MAX_LEN; i++){
+		memset(uc_Wrk, 0x00, 5);
+		uc_Wrk[0] = in_char[i] & 0x0f;				/* 0-3Bit */
+		uc_Wrk[1] = (in_char[i] & 0xf0) >> 4;		/* 4-7Bit */
+		out_char[j] = 0x00;
+		out_char[j] = HexData[(int)uc_Wrk[1]];
+		j++;
+		out_char[j] = 0x00;
+		out_char[j] = HexData[(int)uc_Wrk[0]];
+		j++;
+	}
 }
